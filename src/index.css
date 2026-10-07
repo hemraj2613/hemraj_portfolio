@@ -1,0 +1,209 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #050505;
+  --card-bg: #0a0a0a;
+  --card-inner: #050505;
+  --border: #1e293b;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --ink: #ffffff;
+  --ink-secondary: #94a3b8;
+  --ink-muted: #64748b;
+  --accent: #38bdf8;
+  --accent-muted: rgba(56, 189, 248, 0.15);
+  --accent-glow: rgba(56, 189, 248, 0.2);
+  --nav-bg: rgba(5, 5, 5, 0.9);
+  --nav-border: #1e293b;
+  --badge-bg: #0a0a0a;
+  --input-bg: #050505;
+  --terminal-bg: #050505;
+  --terminal-header: #0a0a0a;
+  --color-scheme: dark;
+}
+
+html.light, [data-theme="light"], body.light {
+  --bg: #f8fafc;
+  --card-bg: #ffffff;
+  --card-inner: #f1f5f9;
+  --border: #e2e8f0;
+  --border-subtle: rgba(0, 0, 0, 0.08);
+  --ink: #0f172a;
+  --ink-secondary: #475569;
+  --ink-muted: #64748b;
+  --accent: #0284c7;
+  --accent-muted: rgba(2, 132, 199, 0.12);
+  --accent-glow: rgba(2, 132, 199, 0.15);
+  --nav-bg: rgba(248, 250, 252, 0.92);
+  --nav-border: #e2e8f0;
+  --badge-bg: #f1f5f9;
+  --input-bg: #f8fafc;
+  --terminal-bg: #0f172a;
+  --terminal-header: #1e293b;
+  --color-scheme: light;
+}
+
+@layer base {
+  body {
+    background-color: var(--bg);
+    color: var(--ink);
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+  }
+  
+  .font-serif, h1, h2, .artistic-heading {
+    font-family: 'Playfair Display', Georgia, Cambria, serif;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Background grid pattern */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+html.light .bg-grid-pattern, [data-theme="light"] .bg-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+}
+
+.bg-dots-pattern {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+html.light .bg-dots-pattern, [data-theme="light"] .bg-dots-pattern {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.08) 1px, transparent 1px);
+}
+
+/* Custom sleek scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* Artistic Flair Panel styling */
+.glass-panel {
+  background: var(--card-bg);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--border-subtle);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px -8px var(--accent-glow);
+}
+
+/* Light Mode Overrides for unified seamless appearance */
+html.light .bg-\[\#050505\], [data-theme="light"] .bg-\[\#050505\] {
+  background-color: #f8fafc !important;
+}
+
+html.light .bg-\[\#0a0a0a\], [data-theme="light"] .bg-\[\#0a0a0a\] {
+  background-color: #ffffff !important;
+}
+
+html.light .border-\[\#1e293b\], [data-theme="light"] .border-\[\#1e293b\] {
+  border-color: #e2e8f0 !important;
+}
+
+html.light .text-white, [data-theme="light"] .text-white {
+  color: #0f172a !important;
+}
+
+html.light .text-\[\#94a3b8\], [data-theme="light"] .text-\[\#94a3b8\] {
+  color: #475569 !important;
+}
+
+html.light .text-slate-300, [data-theme="light"] .text-slate-300 {
+  color: #334155 !important;
+}
+
+html.light .text-slate-400, [data-theme="light"] .text-slate-400 {
+  color: #64748b !important;
+}
+
+html.light .text-\[\#38bdf8\], [data-theme="light"] .text-\[\#38bdf8\] {
+  color: #0284c7 !important;
+}
+
+html.light .bg-\[\#050505\]\/95, [data-theme="light"] .bg-\[\#050505\]\/95,
+html.light .bg-\[\#050505\]\/90, [data-theme="light"] .bg-\[\#050505\]\/90,
+html.light .bg-\[\#050505\]\/85, [data-theme="light"] .bg-\[\#050505\]\/85 {
+  background-color: rgba(248, 250, 252, 0.94) !important;
+}
+
+html.light .bg-\[\#050505\]\/98, [data-theme="light"] .bg-\[\#050505\]\/98 {
+  background-color: rgba(255, 255, 255, 0.98) !important;
+}
+
+/* Light mode primary CTA styling */
+html.light .bg-white.text-black, [data-theme="light"] .bg-white.text-black {
+  background-color: #0f172a !important;
+  color: #ffffff !important;
+}
+
+html.light .bg-white.text-black:hover, [data-theme="light"] .bg-white.text-black:hover {
+  background-color: #1e293b !important;
+}
+
+/* Keep terminal dark & readable in light mode */
+html.light #terminal .bg-\[\#050505\], [data-theme="light"] #terminal .bg-\[\#050505\] {
+  background-color: #0b1120 !important;
+}
+html.light #terminal .bg-\[\#0a0a0a\], [data-theme="light"] #terminal .bg-\[\#0a0a0a\] {
+  background-color: #111827 !important;
+}
+html.light #terminal .border-\[\#1e293b\], [data-theme="light"] #terminal .border-\[\#1e293b\] {
+  border-color: #1f2937 !important;
+}
+html.light #terminal .text-white, [data-theme="light"] #terminal .text-white {
+  color: #f8fafc !important;
+}
+html.light #terminal .text-slate-300, [data-theme="light"] #terminal .text-slate-300 {
+  color: #cbd5e1 !important;
+}
+html.light #terminal .text-slate-400, [data-theme="light"] #terminal .text-slate-400 {
+  color: #94a3b8 !important;
+}
+html.light #terminal .text-\[\#94a3b8\], [data-theme="light"] #terminal .text-\[\#94a3b8\] {
+  color: #94a3b8 !important;
+}
+html.light #terminal .text-\[\#38bdf8\], [data-theme="light"] #terminal .text-\[\#38bdf8\] {
+  color: #38bdf8 !important;
+}
+
+/* Light mode floating and shadow flourishes */
+html.light .shadow-2xl, [data-theme="light"] .shadow-2xl {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.07), 0 8px 10px -6px rgba(0, 0, 0, 0.05) !important;
+}
+
+html.light .shadow-xl, [data-theme="light"] .shadow-xl {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.06), 0 4px 6px -4px rgba(0, 0, 0, 0.04) !important;
+}
+
+
