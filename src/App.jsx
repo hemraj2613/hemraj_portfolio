@@ -125,7 +125,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#050505] text-[#ffffff] flex flex-col selection:bg-[#38bdf8]/30 selection:text-[#38bdf8] transition-colors duration-250">
+   <div className="min-h-screen bg-[#050505] text-[#ffffff] flex flex-col selection:bg-[#38bdf8]/30 selection:text-[#38bdf8] transition-colors duration-250">
       {/* Top Sticky Navigation */}
       <Navbar
         profile={profile}

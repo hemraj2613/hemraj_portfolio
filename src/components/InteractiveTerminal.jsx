@@ -196,14 +196,14 @@ export const InteractiveTerminal = () => {
       id="terminal"
       className="py-24 relative bg-[#050505] border-t border-[#1e293b]"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8  ">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#0a0a0a] border border-[#1e293b] text-[#38bdf8] text-xs font-mono mb-4">
             <TerminalIcon className="w-3.5 h-3.5" />
             <span>INTERACTIVE DEVELOPER CLI</span>
           </div>
-          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white tracking-tight mb-4">
+          <h2 className="font-serif text-3xl sm:text-4xl font-extrabold text-[#38bdf8] dark:text-white  tracking-tight mb-4">
             Interactive Developer Terminal
           </h2>
           <p className="text-[#94a3b8] text-sm sm:text-base leading-relaxed">
@@ -213,12 +213,14 @@ export const InteractiveTerminal = () => {
         </div>
 
         {/* Terminal Container */}
+        
         <div
-          className={`mx-auto transition-all duration-300 ${isExpanded ? "max-w-6xl" : "max-w-4xl"}`}
+          className={`mx-auto transition-all duration-300 ${isExpanded ? "max-w-6xl" : "max-w-4xl"} `}
         >
-          <div className="rounded-3xl border border-[#1e293b] bg-[#050505] shadow-2xl overflow-hidden font-mono text-xs sm:text-sm">
+          
+          <div className="rounded-3xl border border-[#1e293b] bg-[#050505]  shadow-2xl overflow-hidden font-mono text-xs sm:text-sm relative">
             {/* Terminal Window Header Bar */}
-            <div className="p-3.5 bg-[#0a0a0a] border-b border-[#1e293b] flex items-center justify-between">
+            <div className="p-3.5 bg-[#0a0a0a] border-b border-[#1e293b] flex items-center justify-between ">
               {/* Window Controls */}
               <div className="flex items-center gap-2">
                 <span className="w-3 h-3 rounded-full bg-rose-500/80 inline-block" />

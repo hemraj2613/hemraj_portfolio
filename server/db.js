@@ -148,30 +148,22 @@ export const initialProjects = [
     category: 'Django & Data Science',
 
     tagline:
-      'E-commerce web application with sales analytics and machine learning features.',
+      'E-commerce web application built with Django, featuring sales analytics and machine learning.',
 
     description:
-      'Built an e-commerce application using Python and Django with product management, shopping cart, order management, authentication, admin dashboard, and data analytics.',
+      'A full-stack e-commerce web application developed using Python and Django, featuring product and category management, shopping cart, order management, user authentication, admin dashboard, sales analytics, customer segmentation, and revenue forecasting.',
 
     features: [
       'Product and category management',
       'Shopping cart and order management',
       'User authentication',
       'Admin dashboard',
-      'Sales analytics',
-      'Revenue forecasting using Linear Regression',
-      'Customer segmentation using K-Means',
-      'Data visualization with Matplotlib',
     ],
 
     technologies: [
       'Python',
       'Django',
       'SQLite',
-      'Pandas',
-      'NumPy',
-      'Scikit-learn',
-      'Matplotlib',
       'HTML',
       'CSS',
       'JavaScript',
@@ -180,13 +172,13 @@ export const initialProjects = [
 
     featured: true,
 
-    image:
-      'https://images.unsplash.com/photo-1556742049-0a67e557b640?auto=format&fit=crop&w=1200&q=80',
+    image: './assets/e-shop.png',
 
     liveUrl: null,
 
     githubUrl: 'https://github.com/hemraj2613',
   },
+
 
   {
     id: 'proj-student-portal',

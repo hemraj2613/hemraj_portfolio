@@ -14,9 +14,11 @@ import {
 
 export const Achievements = ({ achievements = [] }) => {
   return (
-    <section id="achievements" className="py-24 bg-[#050505] border-t border-[#1e293b] relative">
+    <section
+      id="achievements"
+      className="py-24 bg-[#050505] border-t border-[#1e293b] relative"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-        
         {/* Section Header */}
         <div className="space-y-3 max-w-2xl">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0a0a0a] border border-[#1e293b] text-xs font-mono text-amber-400">
@@ -27,19 +29,19 @@ export const Achievements = ({ achievements = [] }) => {
             Key Honors & Hackathon Achievements
           </h2>
           <p className="text-sm sm:text-base text-[#94a3b8]">
-            Recognized for technical creativity, problem-solving, and practical engineering in provincial tech competitions.
+            Recognized for technical creativity, problem-solving, and practical
+            engineering in provincial tech competitions.
           </p>
         </div>
 
         {/* Featured Achievement Card */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center ">
           <motion.div
             initial={{ opacity: 0, scale: 0.98 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="lg:col-span-12 p-8 sm:p-10 rounded-3xl bg-gradient-to-br from-[#0a0a0a] via-[#050505] to-[#0a0a0a] border-2 border-amber-500/40 relative overflow-hidden shadow-2xl space-y-6"
+            className="lg:col-span-12 p-8 sm:p-10 rounded-3xl bg-[#050505] border-2 border-dark-500/40 relative overflow-hidden shadow-2xl space-y-6"
           >
             {/* Background Glow */}
             <div className="absolute -right-20 -top-20 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
@@ -54,7 +56,9 @@ export const Achievements = ({ achievements = [] }) => {
                     <span className="px-3 py-0.5 rounded-full bg-amber-500/20 border border-amber-500/30 text-amber-300 text-xs font-mono font-bold">
                       🏆 Winner In Province Ideathon
                     </span>
-                    <span className="text-xs font-mono text-[#94a3b8]">CodeFest 2025</span>
+                    <span className="text-xs font-mono text-[#94a3b8]">
+                      CodeFest 2025
+                    </span>
                   </div>
                   <h3 className="font-serif text-2xl sm:text-3xl font-extrabold text-white pt-1">
                     1st Position — Farwest Province Ideathon
@@ -78,7 +82,11 @@ export const Achievements = ({ achievements = [] }) => {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 relative z-10 text-xs sm:text-sm">
               <div className="lg:col-span-2 space-y-4">
                 <p className="text-[#94a3b8] leading-relaxed text-sm">
-                  Awarded First Position among leading university and provincial student engineering teams at CodeFest 2025 Farwest Province Ideathon. Recognized by judges and academic mentors for pitching, architecting, and prototyping an impactful software solution solving critical regional challenges.
+                  Awarded First Position among leading university and provincial
+                  student engineering teams at CodeFest 2025 Farwest Province
+                  Ideathon. Recognized by judges and academic mentors for
+                  pitching, architecting, and prototyping an impactful software
+                  solution solving critical regional challenges.
                 </p>
                 <div className="flex flex-wrap gap-2 pt-2">
                   <span className="px-3 py-1 rounded-lg bg-[#050505] border border-[#1e293b] text-xs font-mono text-amber-300">
@@ -113,11 +121,8 @@ export const Achievements = ({ achievements = [] }) => {
                 </ul>
               </div>
             </div>
-
           </motion.div>
-
         </div>
-
       </div>
     </section>
   );

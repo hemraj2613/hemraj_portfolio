@@ -10,7 +10,166 @@ import {
   Star,
 } from "lucide-react";
 
-import { initialProjects } from "../../server/db.js";
+import eshop from "../../assets/e-shop.png";
+import studentPortal from "../../assets/student_portal_mobile_app.png";
+import bloodBridge from "../../assets/bloodbridge.jpg";
+import nagarAlert from "../../assets/nagaralert.png";
+
+const initialProjects = [
+  {
+    id: "proj-eshop",
+    title: "E-Shop — Django E-Commerce",
+    shortTitle: "E-Shop",
+    category: "Django & Data Science",
+
+    tagline:
+      "E-commerce web application built with Django, featuring sales analytics and machine learning.",
+
+    description:
+      "A full-stack e-commerce web application developed using Python and Django, featuring product and category management, shopping cart, order management, user authentication, admin dashboard, sales analytics, customer segmentation, and revenue forecasting.",
+
+    features: [
+      "Product and category management",
+      "Shopping cart and order management",
+      "User authentication",
+      "Admin dashboard",
+    ],
+
+    technologies: [
+      "Python",
+      "Django",
+      "SQLite",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Bootstrap",
+    ],
+
+    featured: true,
+
+    image: eshop,
+
+    liveUrl: null,
+
+    githubUrl: "https://github.com/hemraj2613",
+  },
+
+  {
+    id: "proj-student-portal",
+    title: "Student Portal Mobile App",
+    shortTitle: "Student Portal",
+    category: "Mobile / Flutter",
+
+    tagline:
+      "Cross-platform student portal application built with Flutter and Dart.",
+
+    description:
+      "Developed a student portal mobile application during my internship using Flutter, Dart, GetX, and REST APIs for managing student profiles, courses, certificates, payments, receipts, and notifications.",
+
+    features: [
+      "User registration and login",
+      "Student profile management",
+      "Course management",
+      "Recorded course access",
+      "Certificate management",
+      "Receipt management",
+      "Notifications",
+      "Student dashboard",
+    ],
+
+    technologies: [
+      "Flutter",
+      "Dart",
+      "GetX",
+      "Node.js",
+      "Express.js",
+      "REST API",
+      "Postman",
+    ],
+
+    featured: true,
+
+    image: studentPortal,
+
+    liveUrl: null,
+
+    githubUrl: "https://github.com/hemraj2613/Code_IT_MobileApp",
+  },
+
+  {
+    id: "proj-blood-bridge",
+    title: "Blood Bridge",
+    shortTitle: "Blood Bridge",
+    category: "Web / PHP & MySQL",
+
+    tagline:
+      "Blood donation management system for managing donors and blood requests.",
+
+    description:
+      "Developed a web-based blood donation management system using PHP and MySQL to manage donors, blood requests, blood groups, and administrative operations.",
+
+    features: [
+      "Donor registration",
+      "Blood request management",
+      "Blood group matching",
+      "Donor management",
+      "Blood bank management",
+      "Admin panel",
+      "Search and filtering",
+    ],
+
+    technologies: ["PHP", "MySQL", "HTML", "CSS", "Bootstrap", "JavaScript"],
+
+    featured: true,
+
+    image: bloodBridge,
+
+    liveUrl: null,
+
+    githubUrl: "https://github.com/hemraj2613/blood_bridge",
+  },
+
+  {
+    id: "proj-nagar-alert",
+    title: "NagarAlert",
+    shortTitle: "NagarAlert",
+    category: "Full Stack MERN",
+
+    tagline:
+      "Smart civic issue reporting platform for reporting and tracking local problems.",
+
+    description:
+      "A MERN stack project designed to help citizens report local issues and allow authorities to manage and track complaints through a centralized platform.",
+
+    features: [
+      "Civic issue reporting",
+      "Issue categories",
+      "Image upload",
+      "User authentication",
+      "Admin dashboard",
+      "Issue status tracking",
+      "Community-based reporting",
+    ],
+
+    technologies: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Tailwind CSS",
+      "Mongoose",
+      "REST API",
+    ],
+
+    featured: true,
+
+    image: nagarAlert,
+
+    liveUrl: null,
+
+    githubUrl: "https://github.com/hemraj2613/nagaralert",
+  },
+];
 
 export const Projects = ({
   projects = initialProjects,
